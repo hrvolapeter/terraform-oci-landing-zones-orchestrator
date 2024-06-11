@@ -14,7 +14,7 @@ module "oci_lz_network" {
 # Network Load Balancers
 module "oci_lz_nlb" {
   count                   = var.nlb_configuration != null ? 1 : 0
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git//modules/nlb?ref=v0.6.6"
+  source                  = "git::https://github.com/hrvolapeter/terraform-oci-cis-landing-zone-networking.git//modules/nlb?ref=v0.6.6"
   nlb_configuration       = var.nlb_configuration
   compartments_dependency = local.compartments_dependency
   network_dependency      = local.network_dependency
